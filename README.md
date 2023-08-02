@@ -2,7 +2,7 @@
 
 ## 1. Install Creusot
 - Follow https://github.com/xldenis/creusot#installing-creusot-as-a-user
- 
+- To check if the installation succeed, try `cargo-creusot` (not `cargo creusot`!!)
 - If `cargo-creusot` crashes with "cargo-creusot: error while loading shared libraries: libstd-c1ef87628285f700.so: cannot open shared object file: No such file or directory",
   - Reason is: `LD_LIBRARY_PATH` is not set up with your path to shared libraries
     - To confirm this, `env | grep LD_LIBRARY_PATH`
@@ -17,7 +17,7 @@
 
 # How to use
 
-## 1. Run `cargo creusot` to transform annotated Rust file to why3 mlcfg file
+## 1. Run `cargo-creusot` to transform annotated Rust file to why3 mlcfg file
 
 ## 2. Find generated mlcfg file in `target/debug/`
 
