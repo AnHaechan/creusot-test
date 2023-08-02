@@ -23,4 +23,11 @@
 
 ## 3. Use why3 (command-line or ide) to prove the mlcfg file.
   - `why3 prove *.mlcfg -L prelude/ --prover Alt-Ergo,2.4.3`
+  - `why3 ide *.mlcfg -L prelude"
   - More about command: https://why3.lri.fr/doc/manpages.html#options
+
+## 4. Why3 will report syntax error. Manually fix it for now.
+  - Syntax error on `invariant { ... }`
+  - It's because, according to [mlcfg syntax](https://why3.lri.fr/doc/input_formats.html#mlcfg), `invariant <id> { ... }` is correct syntax. (Invariants need identifier)
+  - Creusot does not automatically add identifier, so, for now, manually add identifiers to every `invariant`.
+    - E.g. `invariant { ... }` -> `invariant I1 { ... }`
